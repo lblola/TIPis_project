@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат предсказания</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="background-circle small"></div>
+    <div class="background-circle medium"></div>
+    <div class="background-circle large"></div>
+    
+    <div class="container" style="margin-top: 100px;"> 
+        <h1>📖 Результат предсказания</h1>
+        <div class="result">
+            <p>Ты милый читающий котик))</p> 
+            <p>Жанр книги: <b>{{ prediction }}</b></p>
+            
+
+            {% if prediction == 'Fiction' %}
+                <img src="{{ url_for('static', filename='images/fiction.jpg') }}" alt="Fiction Genre">
+            {% elif prediction == 'Non-Fiction' %}
+                <img src="{{ url_for('static', filename='images/nonfiction.jpg') }}" alt="Non-Fiction Genre">
+            {% else %}
+                <img src="{{ url_for('static', filename='images/default.jpg') }}" alt="Unknown Genre">
+            {% endif %}
+            
+            <p>Спасибо за использование нашего сервиса! Мы надеемся, что результат был полезен.</p>
+            <a href="/" class="btn">Вернуться на главную</a> 
+        </div>
+    </div>
+</body>
+</html>

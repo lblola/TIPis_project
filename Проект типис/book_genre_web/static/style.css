@@ -1,0 +1,150 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%; 
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button.btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.btn:hover {
+    background: #0056b3;
+}
+
+.tips {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+
+.background-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: #007bff;
+}
+
+.background-circle.small {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 10%;
+}
+
+.background-circle.medium {
+    width: 150px;
+    height: 150px;
+    top: 100px;
+    right: 10%;
+}
+
+.background-circle.large {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    left: -50px;
+}
+
+/* Результат */
+.result img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.result p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    button.btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .container {
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    button.btn {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .background-circle {
+        display: none; 
+    }
+}
